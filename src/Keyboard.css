@@ -1,0 +1,34 @@
+.keyboard-wrapper {
+  border: 2px solid blue;
+  margin-top: 70px;
+}
+
+.display-words{
+  border: 2px solid greenyellow;
+  height: 40px;
+  margin: 0px auto;
+  width: 750px;
+}
+
+.letters{
+  border: 2px solid pink;
+  height: 400px;
+  margin: 0px auto;
+  width: 750px;
+}
+
+.letter{
+  border: 2px solid #f80a32;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.press-effect{
+  background:black;
+  color: white;
+}
+
