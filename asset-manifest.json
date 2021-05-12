@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/typing-speed/static/css/main.5b286781.chunk.css",
-    "main.js": "/typing-speed/static/js/main.cccd3534.chunk.js",
-    "main.js.map": "/typing-speed/static/js/main.cccd3534.chunk.js.map",
+    "main.css": "/typing-speed/static/css/main.e3dccf77.chunk.css",
+    "main.js": "/typing-speed/static/js/main.e598979f.chunk.js",
+    "main.js.map": "/typing-speed/static/js/main.e598979f.chunk.js.map",
     "runtime-main.js": "/typing-speed/static/js/runtime-main.fe4bbfdb.js",
     "runtime-main.js.map": "/typing-speed/static/js/runtime-main.fe4bbfdb.js.map",
-    "static/js/2.819b2bf6.chunk.js": "/typing-speed/static/js/2.819b2bf6.chunk.js",
-    "static/js/2.819b2bf6.chunk.js.map": "/typing-speed/static/js/2.819b2bf6.chunk.js.map",
+    "static/js/2.f40cae86.chunk.js": "/typing-speed/static/js/2.f40cae86.chunk.js",
+    "static/js/2.f40cae86.chunk.js.map": "/typing-speed/static/js/2.f40cae86.chunk.js.map",
     "index.html": "/typing-speed/index.html",
-    "static/css/main.5b286781.chunk.css.map": "/typing-speed/static/css/main.5b286781.chunk.css.map",
-    "static/js/2.819b2bf6.chunk.js.LICENSE.txt": "/typing-speed/static/js/2.819b2bf6.chunk.js.LICENSE.txt"
+    "static/css/main.e3dccf77.chunk.css.map": "/typing-speed/static/css/main.e3dccf77.chunk.css.map",
+    "static/js/2.f40cae86.chunk.js.LICENSE.txt": "/typing-speed/static/js/2.f40cae86.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fe4bbfdb.js",
-    "static/js/2.819b2bf6.chunk.js",
-    "static/css/main.5b286781.chunk.css",
-    "static/js/main.cccd3534.chunk.js"
+    "static/js/2.f40cae86.chunk.js",
+    "static/css/main.e3dccf77.chunk.css",
+    "static/js/main.e598979f.chunk.js"
   ]
 }
