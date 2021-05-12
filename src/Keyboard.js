@@ -1,44 +1,57 @@
-import React from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./Keyboard.css";
 
 export default function Keyboard() {
+  const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
+  const [activeKey, setActiveKey] = useState(new Set());
+
+  const handleKeyDown = useCallback(
+    ({ code }) => {
+      activeKey.add(code.toLowerCase());
+      setActiveKey(new Set([...activeKey]));
+    },
+    [activeKey, setActiveKey]
+  );
+
+  const handleKeyUp = useCallback(
+    ({ code }) => {
+      activeKey.delete(code.toLowerCase());
+      setActiveKey(new Set([...activeKey]));
+    },
+    [activeKey, setActiveKey]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keyup", handleKeyUp);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keyup", handleKeyUp);
+    };
+  }, [handleKeyDown, handleKeyUp]);
+
+  console.log("activeKey", activeKey);
+
   return (
     <div className="keyboard-wrapper">
-      <div className="display-words"></div>
-      <div className="letters">
-        <div className="row-1">
-          <div className="letter"><span>q</span></div>
-          <div className="letter"><span>w</span></div>
-          <div className="letter"><span>e</span></div>
-          <div className="letter"><span>r</span></div>
-          <div className="letter"><span>t</span></div>
-          <div className="letter"><span>y</span></div>
-          <div className="letter"><span>u</span></div>
-          <div className="letter"><span>i</span></div>
-          <div className="letter"><span>o</span></div>
-          <div className="letter"><span>p</span></div>
+      {lettersArray.map((row, index) => (
+        <div key={`row-${index + 1}`} className={`row-${index + 1}`}>
+          {Array.from(row).map((letter) => (
+            <div
+              className={
+                activeKey.has(`key${letter}`)
+                  ? "letter active-letter"
+                  : "letter"
+              }
+              key={letter}
+            >
+              {letter}
+            </div>
+          ))}
         </div>
-        <div className="row-2">
-          <div className="letter"><span>a</span></div>
-          <div className="letter"><span>s</span></div>
-          <div className="letter"><span>d</span></div>
-          <div className="letter"><span>f</span></div>
-          <div className="letter"><span>g</span></div>
-          <div className="letter"><span>h</span></div>
-          <div className="letter"><span>j</span></div>
-          <div className="letter"><span>k</span></div>
-          <div className="letter"><span>l</span></div>
-        </div>
-        <div className="row-3">
-          <div className="letter"><span>z</span></div>
-          <div className="letter"><span>x</span></div>
-          <div className="letter"><span>c</span></div>
-          <div className="letter"><span>v</span></div>
-          <div className="letter"><span>b</span></div>
-          <div className="letter"><span>n</span></div>
-          <div className="letter"><span>m</span></div>
-        </div>
-        
+      ))}
+      <div className="row-4">
+        <div className={activeKey.has('space') ? "letter active-letter" : "letter"}>space</div>
       </div>
     </div>
   );

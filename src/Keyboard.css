@@ -27,8 +27,8 @@
   text-align: center;
 }
 
-.press-effect{
-  background:black;
+.active-letter {
+  background-color:black;
   color: white;
 }
 
