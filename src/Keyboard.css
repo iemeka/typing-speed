@@ -1,34 +1,43 @@
 .keyboard-wrapper {
-  border: 2px solid blue;
-  margin-top: 70px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
 }
 
-.display-words{
-  border: 2px solid greenyellow;
-  height: 40px;
-  margin: 0px auto;
-  width: 750px;
+.keyboard-wrapper[data-theme="light"] {
+  background-color: #fff;
 }
 
-.letters{
-  border: 2px solid pink;
-  height: 400px;
-  margin: 0px auto;
-  width: 750px;
-}
-
-.letter{
-  border: 2px solid #f80a32;
-  height: 60px;
-  width: 60px;
-  display: inline-block;
-  margin: 5px;
-  font-size: 20px;
+.keyboard-wrapper .row {
+  flex: 1;
   text-align: center;
 }
 
-.active-letter {
-  background-color:black;
-  color: white;
+.keyboard-wrapper .letter {  
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #312344;
+  margin: 5px;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
 }
 
+.keyboard-wrapper .letter span {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.keyboard-wrapper .space-bar{
+  width: 500px;
+}
+
+
+ 
+.keyboard-wrapper .active-letter {
+  background-color: #d12e2c;
+  color: white;
+}

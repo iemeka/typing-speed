@@ -35,7 +35,7 @@ export default function Keyboard() {
   return (
     <div className="keyboard-wrapper">
       {lettersArray.map((row, index) => (
-        <div key={`row-${index + 1}`} className={`row-${index + 1}`}>
+        <div key={`row-${index + 1}`} className="row">
           {Array.from(row).map((letter) => (
             <div
               className={
@@ -45,13 +45,17 @@ export default function Keyboard() {
               }
               key={letter}
             >
-              {letter}
+              <span>{letter}</span>
             </div>
           ))}
         </div>
       ))}
-      <div className="row-4">
-        <div className={activeKey.has('space') ? "letter active-letter" : "letter"}>space</div>
+      <div className="row">
+        <div
+          className={activeKey.has("space") ? "letter active-letter space-bar" : "letter space-bar"}
+        >
+          <span>space</span>
+        </div>
       </div>
     </div>
   );

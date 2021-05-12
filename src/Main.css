@@ -1,0 +1,32 @@
+.main-content {
+  border: 3px solid red;
+  height: 700px;
+  width: 1500px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.main-content .left {
+  border: 2px solid yellow;
+  width: 250px;
+}
+
+.main-content .center {
+  border: 2px solid purple;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-content .center .top {
+  border: 2px solid violet;
+}
+
+.main-content .center .bottom {
+}
+
+.main-content .right {
+  border: 2px solid greenyellow;
+  width: 250px;
+}
