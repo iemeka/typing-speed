@@ -1,9 +1,10 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useCallback, useContext } from "react";
 import "./Keyboard.css";
+import { utilityContext } from "./utilities/utilityContext";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const [activeKey, setActiveKey] = useState(new Set());
+  const { activeKey, setActiveKey } = useContext(utilityContext);
 
   const handleKeyDown = useCallback(
     ({ code }) => {
@@ -30,8 +31,6 @@ export default function Keyboard() {
     };
   }, [handleKeyDown, handleKeyUp]);
 
-  console.log("activeKey", activeKey);
-
   return (
     <div className="keyboard-wrapper">
       {lettersArray.map((row, index) => (
@@ -52,7 +51,11 @@ export default function Keyboard() {
       ))}
       <div className="row">
         <div
-          className={activeKey.has("space") ? "letter active-letter space-bar" : "letter space-bar"}
+          className={
+            activeKey.has("space")
+              ? "letter active-letter space-bar"
+              : "letter space-bar"
+          }
         >
           <span>space</span>
         </div>
