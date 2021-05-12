@@ -2,5 +2,7 @@ import React from "react";
 
 export const utilityContext = React.createContext({
   activeKey: new Set(),
-  setActiveKey: () => {},
+  setActiveKey: () => { },
+  currentPosition: 1,
+  setCurrentPosition: () => {}
 });

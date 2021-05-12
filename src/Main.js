@@ -1,6 +1,7 @@
 import React from "react";
 import Keyboard from "./Keyboard";
 import Indicators from "./Indicators";
+import Display from "./Display"
 import "./Main.css";
 
 export default function Main() {
@@ -10,8 +11,12 @@ export default function Main() {
         <Indicators />
       </div>
       <div className="center">
-        <div className="top">are you there</div>
-        <div className="bottom"><Keyboard /></div>
+        <div className="top">
+          <Display />
+        </div>
+        <div className="bottom">
+          <Keyboard />
+        </div>
       </div>
       <div className="right">are you right</div>
     </div>
