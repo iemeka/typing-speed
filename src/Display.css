@@ -1,0 +1,8 @@
+.text-wrapper .display-text{
+  /* color: yellow; */
+}
+
+.text-wrapper .current-letter{
+  border-bottom: 2px solid #fff;
+  /* color:black */
+}

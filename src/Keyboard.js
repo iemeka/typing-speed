@@ -1,16 +1,33 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useCallback, useContext } from "react";
 import "./Keyboard.css";
+import { utilityContext } from "./utilities/utilityContext";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const [activeKey, setActiveKey] = useState(new Set());
-
+  const {
+    activeKey,
+    setActiveKey,
+    currentPosition,
+    setCurrentPosition,
+    bagsOfKeys,
+    setbagsOfKeys,
+  } = useContext(utilityContext);
   const handleKeyDown = useCallback(
-    ({ code }) => {
+    ({ code, key }) => {
+      bagsOfKeys[currentPosition] = key.toLowerCase();
+      setbagsOfKeys(Object.assign({}, bagsOfKeys));
+      setCurrentPosition(currentPosition + 1);
       activeKey.add(code.toLowerCase());
       setActiveKey(new Set([...activeKey]));
     },
-    [activeKey, setActiveKey]
+    [
+      activeKey,
+      setActiveKey,
+      currentPosition,
+      setCurrentPosition,
+      bagsOfKeys,
+      setbagsOfKeys,
+    ]
   );
 
   const handleKeyUp = useCallback(
@@ -29,8 +46,6 @@ export default function Keyboard() {
       window.removeEventListener("keyup", handleKeyUp);
     };
   }, [handleKeyDown, handleKeyUp]);
-
-  console.log("activeKey", activeKey);
 
   return (
     <div className="keyboard-wrapper">
@@ -52,7 +67,11 @@ export default function Keyboard() {
       ))}
       <div className="row">
         <div
-          className={activeKey.has("space") ? "letter active-letter space-bar" : "letter space-bar"}
+          className={
+            activeKey.has("space")
+              ? "letter active-letter space-bar"
+              : "letter space-bar"
+          }
         >
           <span>space</span>
         </div>

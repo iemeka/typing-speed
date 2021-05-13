@@ -1,10 +1,13 @@
-import './App.css';
-import Main from './Main.js'
+import "./App.css";
+import Main from "./Main.js";
+import UtilityProvider from './utilities/UtilityProvider'
 
 function App() {
   return (
     <div className="container">
-      <Main />
+      <UtilityProvider>
+        <Main />
+      </UtilityProvider>
     </div>
   );
 }
