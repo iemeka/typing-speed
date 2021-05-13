@@ -11,9 +11,11 @@ export default function Display() {
     setNumLetterPassed,
     numLetterFailed,
     setNumLetterFailed,
+    setLengthOfText
   } = useContext(utilityContext);
 
   useEffect(() => {
+    setLengthOfText(text.length)
     if (currentPosition > 1 && currentPosition < text.length + 2) {
       if (text[currentPosition - 2].toLowerCase() === bagsOfKeys[currentPosition - 1]){
          setNumLetterPassed(numLetterPassed + 1)
