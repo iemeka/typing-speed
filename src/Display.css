@@ -1,9 +1,8 @@
 .text-wrapper .display-text{
-  color: yellow;
+  /* color: yellow; */
 }
 
-.text-wrapper .current{
-  background-color: #fff;
+.text-wrapper .current-letter{
   font-size: 20px;
-  color:black
+  /* color:black */
 }

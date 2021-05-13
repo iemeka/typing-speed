@@ -4,15 +4,30 @@ import { utilityContext } from "./utilities/utilityContext";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const { activeKey, setActiveKey, currentPosition, setCurrentPosition } = useContext(utilityContext);
-
+  const {
+    activeKey,
+    setActiveKey,
+    currentPosition,
+    setCurrentPosition,
+    bagsOfKeys,
+    setbagsOfKeys,
+  } = useContext(utilityContext);
   const handleKeyDown = useCallback(
-    ({ code }) => {
-      setCurrentPosition(currentPosition+1)
+    ({ code, key }) => {
+      bagsOfKeys[`${currentPosition}${key.toLowerCase()}`] = key;
+      setbagsOfKeys(Object.assign({}, bagsOfKeys));
+      setCurrentPosition(currentPosition + 1);
       activeKey.add(code.toLowerCase());
       setActiveKey(new Set([...activeKey]));
     },
-    [activeKey, setActiveKey,currentPosition,setCurrentPosition]
+    [
+      activeKey,
+      setActiveKey,
+      currentPosition,
+      setCurrentPosition,
+      bagsOfKeys,
+      setbagsOfKeys,
+    ]
   );
 
   const handleKeyUp = useCallback(
