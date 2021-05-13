@@ -8,7 +8,7 @@ export default function Accuracy() {
     <div className="accuracy-wrapper">
       <p>Pass : {numLetterPassed}</p>
       <p>Fail : {numLetterFailed}</p>
-      <p>Accuracy: {(numLetterPassed / lengthOfText) * 100}%</p>
+      <p>Accuracy: {((numLetterPassed / lengthOfText) * 100).toFixed(2)}%</p>
     </div>
   );
 }
