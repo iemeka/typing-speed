@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/typing-speed/static/css/main.2f8a4a6d.chunk.css",
-    "main.js": "/typing-speed/static/js/main.6e1a1af8.chunk.js",
-    "main.js.map": "/typing-speed/static/js/main.6e1a1af8.chunk.js.map",
+    "main.css": "/typing-speed/static/css/main.8cbcb7a4.chunk.css",
+    "main.js": "/typing-speed/static/js/main.838fe522.chunk.js",
+    "main.js.map": "/typing-speed/static/js/main.838fe522.chunk.js.map",
     "runtime-main.js": "/typing-speed/static/js/runtime-main.fe4bbfdb.js",
     "runtime-main.js.map": "/typing-speed/static/js/runtime-main.fe4bbfdb.js.map",
     "static/js/2.4245c36e.chunk.js": "/typing-speed/static/js/2.4245c36e.chunk.js",
     "static/js/2.4245c36e.chunk.js.map": "/typing-speed/static/js/2.4245c36e.chunk.js.map",
     "index.html": "/typing-speed/index.html",
-    "static/css/main.2f8a4a6d.chunk.css.map": "/typing-speed/static/css/main.2f8a4a6d.chunk.css.map",
+    "static/css/main.8cbcb7a4.chunk.css.map": "/typing-speed/static/css/main.8cbcb7a4.chunk.css.map",
     "static/js/2.4245c36e.chunk.js.LICENSE.txt": "/typing-speed/static/js/2.4245c36e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fe4bbfdb.js",
     "static/js/2.4245c36e.chunk.js",
-    "static/css/main.2f8a4a6d.chunk.css",
-    "static/js/main.6e1a1af8.chunk.js"
+    "static/css/main.8cbcb7a4.chunk.css",
+    "static/js/main.838fe522.chunk.js"
   ]
 }
