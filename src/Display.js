@@ -4,7 +4,7 @@ import "./Display.css";
 
 export default function Display() {
   const text =
-    "Constant awareness that everything is born from change. The knowledge that there is nothing nature loves more than to alter what exists and make new things like it. All that exists is the seed of what will emerge from it. You think the only seeds are the ones that make plants or children Go deeper. The things you think about determine the quality of your mind. Your soul takes on the color of your thoughts. Color it with a run of thoughts like these - Anywhere you can lead your life, you can lead a good one.";
+    "My sister, Paula, and her husband, Chris, had just finished tucking their young ones into bed one evening when they heard crying coming from the childrens room. Rushing in, they found Tommy crying hysterically. He had accidentally swallowed a coin and was sure he was going to die. No amount of talking could change his mind. Trying to calm him, Chris palmed a coin that he happened to have in his pocket and pretended to remove it from Tommys ear.  Tommy, naturally, was delighted. In a flash, he snatched it from his fathers hand, swallowed it and demanded cheerfully - Do it again, Dad";
   const {
     currentPosition,
     bagsOfKeys,

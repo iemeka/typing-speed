@@ -17,4 +17,6 @@ export const utilityContext = React.createContext({
   setCurNumOfTypedWords: () => {},
   startTime: null,
   setStartTime: () => {},
+  timeSpent: 0,
+  setTimeSpent: () => {},
 });
