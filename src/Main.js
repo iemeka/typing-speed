@@ -1,7 +1,8 @@
 import React from "react";
 import Keyboard from "./Keyboard";
 import Accuracy from "./Accuracy";
-import Display from "./Display"
+import Display from "./Display";
+import WordPerMinute from "./WordPerMinute";
 import "./Main.css";
 
 export default function Main() {
@@ -9,6 +10,7 @@ export default function Main() {
     <div className="main-content">
       <div className="left">
         <Accuracy />
+        <WordPerMinute />
       </div>
       <div className="center">
         <div className="top">

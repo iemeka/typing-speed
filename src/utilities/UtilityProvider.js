@@ -7,7 +7,9 @@ function UtilityProvider({ children }) {
   const [bagsOfKeys, setbagsOfKeys] = useState({});
   const [numLetterFailed, setNumLetterFailed] = useState(0);
   const [numLetterPassed, setNumLetterPassed] = useState(0);
-  const [lengthOfText, setLengthOfText] = useState(0);
+  const [lengthOfText, setLengthOfText] = useState(1);
+  const [curNumOfTypedWords, setCurNumOfTypedWords] = useState(0);
+  const [startTime, setStartTime] = useState(null)
   const value = {
     activeKey,
     setActiveKey,
@@ -21,6 +23,10 @@ function UtilityProvider({ children }) {
     setNumLetterPassed,
     lengthOfText,
     setLengthOfText,
+    curNumOfTypedWords,
+    setCurNumOfTypedWords,
+    startTime,
+    setStartTime
   };
   return (
     <utilityContext.Provider value={value}>{children}</utilityContext.Provider>
