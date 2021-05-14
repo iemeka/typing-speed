@@ -10,7 +10,13 @@ export const utilityContext = React.createContext({
   numLetterFailed: 0,
   setNumLetterFailed: () => {},
   numLetterPassed: 0,
-  setNumLetterPassed: () => { },
-  lengthOfText: 0,
-  setLengthOfText: () => {}
+  setNumLetterPassed: () => {},
+  lengthOfText: 1,
+  setLengthOfText: () => {},
+  curNumOfTypedWords: 0,
+  setCurNumOfTypedWords: () => {},
+  startTime: null,
+  setStartTime: () => {},
+  timeSpent: 0,
+  setTimeSpent: () => {},
 });
