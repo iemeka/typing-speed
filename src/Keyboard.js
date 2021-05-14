@@ -14,11 +14,11 @@ export default function Keyboard() {
   } = useContext(utilityContext);
   const handleKeyDown = useCallback(
     ({ code, key }) => {
-      bagsOfKeys[currentPosition] = key.toLowerCase();
-      setbagsOfKeys(Object.assign({}, bagsOfKeys));
-      setCurrentPosition(currentPosition + 1);
-      activeKey.add(code.toLowerCase());
-      setActiveKey(new Set([...activeKey]));
+        bagsOfKeys[currentPosition] = key.toLowerCase();
+        setbagsOfKeys(Object.assign({}, bagsOfKeys));
+        setCurrentPosition(currentPosition + 1);
+        activeKey.add(code.toLowerCase());
+        setActiveKey(new Set([...activeKey]));
     },
     [
       activeKey,

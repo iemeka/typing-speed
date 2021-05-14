@@ -5,6 +5,10 @@ export const utilityContext = React.createContext({
   setActiveKey: () => {},
   currentPosition: 1,
   setCurrentPosition: () => {},
-  bagsOfKeys : {},
-  setbagsOfKeys: () => {}
+  bagsOfKeys: {},
+  setbagsOfKeys: () => {},
+  numLetterFailed: 0,
+  setNumLetterFailed: () => {},
+  numLetterPassed: 0,
+  setNumLetterPassed: () => {},
 });

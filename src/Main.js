@@ -1,6 +1,6 @@
 import React from "react";
 import Keyboard from "./Keyboard";
-import Indicators from "./Indicators";
+import Accuracy from "./Accuracy";
 import Display from "./Display"
 import "./Main.css";
 
@@ -8,7 +8,7 @@ export default function Main() {
   return (
     <div className="main-content">
       <div className="left">
-        <Indicators />
+        <Accuracy />
       </div>
       <div className="center">
         <div className="top">
