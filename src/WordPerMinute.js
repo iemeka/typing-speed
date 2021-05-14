@@ -3,7 +3,7 @@ import { utilityContext } from "./utilities/utilityContext";
 import "./WordPerMinute.css";
 
 export default function WordPerMinute() {
-  const { curNumOfTypedWords, startTime, currentPosition, lengthOfText } =
+  const { curNumOfTypedWords, startTime } =
     useContext(utilityContext);
   const time = new Date();
   const currentTime = time.getMinutes() + time.getSeconds() / 60;
