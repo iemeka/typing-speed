@@ -9,12 +9,19 @@ export default function Display() {
   const getClass = useCallback(
     (index, letter) => {
       const isVisited = index < pressedKeys.length;
-      const isTypo = pressedKeys[index] !== letter.toLowerCase(); 
-      if (isVisited && isTypo)
-        return letter === " " ? "character typo-space" : "character typo";
+      const isTypo = pressedKeys[index] !== letter.toLowerCase();
+      let classList = "character";
 
-      if (isVisited) return "character visited";
-      return "character";
+      if (letter === " ") {
+        classList += " space";
+      }
+
+      if (isVisited && isTypo) {
+        classList += " typo";
+      } else if (isVisited) {
+        classList += " visited";
+      }
+      return classList;
     },
     [pressedKeys]
   );

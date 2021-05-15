@@ -1,5 +1,5 @@
 .keyboard-wrapper {
-  height: 360px;
+  height: 310px;
   display: flex;
   flex-direction: column;
 }
@@ -19,8 +19,8 @@
   align-items: center;
   background-color: #312344;
   margin: 5px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
 }
 
@@ -36,6 +36,6 @@
 }
 
 .keyboard-wrapper .active-letter {
-  background-color: #d12e2c;
+  background-color: #f9ca24;
   color: white;
 }

@@ -1,15 +1,22 @@
+.text-wrapper {
+  padding: 10px;
+}
+
 .text-wrapper .character {
   color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 2px;
 }
 
 .text-wrapper .visited {
-  color: #a0a0a7;
+  color: #6ab04c;
 }
 
 .text-wrapper .typo {
   color: #d02d2a;
 }
 
-.text-wrapper .typo-space {
-  border-bottom: 1px solid #d02d2a;
+.text-wrapper .space {
+  width: 10px;
 }
