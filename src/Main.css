@@ -1,7 +1,7 @@
 .main-content {
   border: 3px solid red;
-  height: 700px;
-  width: 1500px;
+  height: 640px;
+  width: 1300px;
   box-sizing: border-box;
   display: flex;
 }
@@ -17,13 +17,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.main-content .center .top {
-  border: 2px solid violet;
-}
-
-.main-content .center .bottom {
 }
 
 .main-content .right {
