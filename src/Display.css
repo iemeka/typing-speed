@@ -1,8 +1,15 @@
-.text-wrapper .display-text{
-  /* color: yellow; */
+.text-wrapper .character {
+  color: #ffffff;
 }
 
-.text-wrapper .current-letter{
-  border-bottom: 2px solid #fff;
-  /* color:black */
+.text-wrapper .visited {
+  color: #a0a0a7;
+}
+
+.text-wrapper .typo {
+  color: #d02d2a;
+}
+
+.text-wrapper .typo-space {
+  border-bottom: 1px solid #d02d2a;
 }

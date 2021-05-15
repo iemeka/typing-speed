@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.keyboard-wrapper .letter {  
+.keyboard-wrapper .letter {
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
@@ -31,12 +31,10 @@
   color: #fff;
 }
 
-.keyboard-wrapper .space-bar{
+.keyboard-wrapper .space-bar {
   width: 500px;
 }
 
-
- 
 .keyboard-wrapper .active-letter {
   background-color: #d12e2c;
   color: white;

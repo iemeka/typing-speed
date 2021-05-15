@@ -1,33 +1,22 @@
 import React, { useEffect, useCallback, useContext } from "react";
 import "./Keyboard.css";
+import text from "./resources/content";
 import { utilityContext } from "./utilities/utilityContext";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const {
-    activeKey,
-    setActiveKey,
-    currentPosition,
-    setCurrentPosition,
-    bagsOfKeys,
-    setbagsOfKeys,
-  } = useContext(utilityContext);
+  const { activeKey, addPressedKey, setActiveKey, pressedKeys } =
+    useContext(utilityContext);
+
   const handleKeyDown = useCallback(
     ({ code, key }) => {
-        bagsOfKeys[currentPosition] = key.toLowerCase();
-        setbagsOfKeys(Object.assign({}, bagsOfKeys));
-        setCurrentPosition(currentPosition + 1);
-        activeKey.add(code.toLowerCase());
-        setActiveKey(new Set([...activeKey]));
+      if (pressedKeys.length < text.length) {
+        addPressedKey(key.toLowerCase());
+      }
+      activeKey.add(code.toLowerCase());
+      setActiveKey(new Set([...activeKey]));
     },
-    [
-      activeKey,
-      setActiveKey,
-      currentPosition,
-      setCurrentPosition,
-      bagsOfKeys,
-      setbagsOfKeys,
-    ]
+    [activeKey, setActiveKey, addPressedKey,pressedKeys]
   );
 
   const handleKeyUp = useCallback(
