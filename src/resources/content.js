@@ -1,0 +1,3 @@
+const text = `my sister paula and her husband chris had just finished tucking their young ones into bed one evening when they heard crying coming from the childrens room rushing in they found tommy crying hysterically he had accidentally swallowed a coin and was sure he was going to die no amount of talking could change his mind trying to calm him chris palmed a coin that he happened to have in his pocket and pretended to remove it from tommys ear tommy naturally was delighted in a flash he snatched it from his fathers hand swallowed it and demanded cheerfully Do it again Dad`;
+
+export default text;
