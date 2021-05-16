@@ -9,6 +9,14 @@
   margin-right: auto;
   color: #fff;
   font-size: 1.3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sound-switch .btn-label span{
+  margin: 2px;
 }
 
 
@@ -31,5 +39,6 @@
 }
 
 .sound-switch .active-btn{
-  background-color: #6ab04c;
+  background-color: #22a6b3;
+
 }

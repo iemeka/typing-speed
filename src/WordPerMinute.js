@@ -36,7 +36,8 @@ export default function WordPerMinute() {
 
   return (
     <div className="wordpermin-wrapper">
-      <p>Average words per minutes : {computeWordPerMins()}</p>
+      <span id="number">{computeWordPerMins()}</span>
+      <span id="text">Average Words Per Minutes</span>
     </div>
   );
 }

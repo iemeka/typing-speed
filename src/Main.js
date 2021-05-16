@@ -10,8 +10,10 @@ export default function Main() {
   return (
     <div className="main-content">
       <div className="left">
-        <Accuracy />
-        <WordPerMinute />
+        <div className="left-background">
+          <Accuracy />
+          <WordPerMinute />
+        </div>
       </div>
       <div className="center">
         <div className="top">

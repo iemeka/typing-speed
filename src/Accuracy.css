@@ -1,4 +1,26 @@
-.accuracy-wrapper p{
-  font-size: 2em;
-  color: #ffffff;
+.accuracy-wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
+
+
+.accuracy-wrapper span{
+  font-size: 2em;
+  color: #251237;
+  text-align: center;
+}
+
+.accuracy-wrapper #number{
+  font-size: 7em;
+}
+
+.accuracy-wrapper #number span{
+  font-size: 30px;
+}
+
+.accuracy-wrapper #text{
+  letter-spacing: 2px;
+
+}
+
