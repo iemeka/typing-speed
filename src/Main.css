@@ -22,4 +22,8 @@
 .main-content .right {
   border: 2px solid greenyellow;
   width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
 }

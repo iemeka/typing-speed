@@ -6,21 +6,23 @@ import kickSoundUrl from "./resources/kick.wav";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const { activeKey, addPressedKey, setActiveKey, pressedKeys } =
+  const { activeKey, addPressedKey, setActiveKey, pressedKeys, toggleSound } =
     useContext(utilityContext);
   const playSound = () => {
     const audio = new Audio(kickSoundUrl);
-    audio.volume = 0.2;
+    audio.volume = 0.25;
     try {
       audio.play();
     } catch (error) {
-      console.log(error);
+      console.log(error); //
     }
   };
 
   const handleKeyDown = useCallback(
     ({ code, key }) => {
-      playSound();
+      if (toggleSound) {
+        playSound();
+      }
       if (pressedKeys.length < text.length) {
         addPressedKey(key.toLowerCase());
       }

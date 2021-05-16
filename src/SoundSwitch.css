@@ -1,0 +1,35 @@
+.sound-switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.sound-switch .btn-label{
+  margin-right: auto;
+  color: #fff;
+  font-size: 1.3em;
+}
+
+
+.sound-switch .sound-btn{
+  border: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 10px;
+  color: #251237;
+  background: #412f5a;
+}
+
+.sound-switch button[for="on"]{
+  border-radius: 8px  0  0 8px;
+}
+
+.sound-switch button[for="off"]{
+  border-radius: 0  8px  8px 0;
+}
+
+.sound-switch .active-btn{
+  background-color: #6ab04c;
+}
