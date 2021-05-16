@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import "./App.css";
 import Main from "./Main.js";
-import UtilityProvider from './utilities/UtilityProvider'
+import UtilityProvider from "./utilities/UtilityProvider";
 
 function App() {
   return (
@@ -9,6 +9,9 @@ function App() {
       <UtilityProvider>
         <Main />
       </UtilityProvider>
+      <div className="created-by">
+        <a href="https://iemeka.github.io">created by emeka</a>
+      </div>
     </div>
   );
 }

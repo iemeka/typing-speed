@@ -3,6 +3,7 @@ import Keyboard from "./Keyboard";
 import Accuracy from "./Accuracy";
 import Display from "./Display";
 import WordPerMinute from "./WordPerMinute";
+import SoundSwitch from "./SoundSwitch";
 import "./Main.css";
 
 export default function Main() {
@@ -20,7 +21,9 @@ export default function Main() {
           <Keyboard />
         </div>
       </div>
-      <div className="right">are you right</div>
+      <div className="right">
+        <SoundSwitch />
+      </div>
     </div>
   );
 }

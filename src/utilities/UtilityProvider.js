@@ -4,6 +4,7 @@ import { utilityContext } from "./utilityContext";
 function UtilityProvider({ children }) {
   const [activeKey, setActiveKey] = useState(new Set());
   const [pressedKeys, setPressedKeys] = useState([]);
+  const [toggleSound, setToggleSound] = useState(true);
 
   const addPressedKey = (key) => {
     pressedKeys.push(key);
@@ -16,6 +17,8 @@ function UtilityProvider({ children }) {
     pressedKeys,
     addPressedKey,
     setPressedKeys,
+    toggleSound,
+    setToggleSound
   };
   return (
     <utilityContext.Provider value={value}>{children}</utilityContext.Provider>
