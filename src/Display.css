@@ -1,5 +1,6 @@
 .text-wrapper {
   padding: 10px;
+  border-bottom: 1px solid #392a47;
 }
 
 .text-wrapper .character {

@@ -10,7 +10,7 @@ function App() {
         <Main />
       </UtilityProvider>
       <div className="created-by">
-        <a href="https://iemeka.github.io">created by emeka</a>
+        <a href="https://iemeka.github.io">created by Emeka</a>
       </div>
     </div>
   );
