@@ -1,33 +1,33 @@
 import React, { useEffect, useCallback, useContext } from "react";
 import "./Keyboard.css";
+import text from "./resources/content";
 import { utilityContext } from "./utilities/utilityContext";
+import kickSoundUrl from "./resources/kick.wav";
 
 export default function Keyboard() {
   const lettersArray = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
-  const {
-    activeKey,
-    setActiveKey,
-    currentPosition,
-    setCurrentPosition,
-    bagsOfKeys,
-    setbagsOfKeys,
-  } = useContext(utilityContext);
+  const { activeKey, addPressedKey, setActiveKey, pressedKeys } =
+    useContext(utilityContext);
+  const playSound = () => {
+    const audio = new Audio(kickSoundUrl);
+    audio.volume = 0.2;
+    try {
+      audio.play();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleKeyDown = useCallback(
     ({ code, key }) => {
-        bagsOfKeys[currentPosition] = key.toLowerCase();
-        setbagsOfKeys(Object.assign({}, bagsOfKeys));
-        setCurrentPosition(currentPosition + 1);
-        activeKey.add(code.toLowerCase());
-        setActiveKey(new Set([...activeKey]));
+      playSound();
+      if (pressedKeys.length < text.length) {
+        addPressedKey(key.toLowerCase());
+      }
+      activeKey.add(code.toLowerCase());
+      setActiveKey(new Set([...activeKey]));
     },
-    [
-      activeKey,
-      setActiveKey,
-      currentPosition,
-      setCurrentPosition,
-      bagsOfKeys,
-      setbagsOfKeys,
-    ]
+    [activeKey, setActiveKey, addPressedKey, pressedKeys]
   );
 
   const handleKeyUp = useCallback(

@@ -1,5 +1,5 @@
 .keyboard-wrapper {
-  height: 360px;
+  height: 310px;
   display: flex;
   flex-direction: column;
 }
@@ -13,14 +13,14 @@
   text-align: center;
 }
 
-.keyboard-wrapper .letter {  
+.keyboard-wrapper .letter {
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
   background-color: #312344;
   margin: 5px;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 8px;
 }
 
@@ -31,13 +31,11 @@
   color: #fff;
 }
 
-.keyboard-wrapper .space-bar{
+.keyboard-wrapper .space-bar {
   width: 500px;
 }
 
-
- 
 .keyboard-wrapper .active-letter {
-  background-color: #d12e2c;
+  background-color: #f9ca24;
   color: white;
 }

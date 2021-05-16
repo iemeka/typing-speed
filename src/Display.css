@@ -1,8 +1,22 @@
-.text-wrapper .display-text{
-  /* color: yellow; */
+.text-wrapper {
+  padding: 10px;
 }
 
-.text-wrapper .current-letter{
-  border-bottom: 2px solid #fff;
-  /* color:black */
+.text-wrapper .character {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.text-wrapper .visited {
+  color: #6ab04c;
+}
+
+.text-wrapper .typo {
+  color: #d02d2a;
+}
+
+.text-wrapper .space {
+  width: 10px;
 }
