@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: space-around;
   background-color: #251237;
+  flex-direction: column;
 }
 
-.created-by{
-  
-  border: 1px solid white;
+.created-by a {
+  color: #fff;
 }
