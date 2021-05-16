@@ -14,7 +14,7 @@ export default function Keyboard() {
     try {
       audio.play();
     } catch (error) {
-      console.log(error); //
+      console.log(error); 
     }
   };
 

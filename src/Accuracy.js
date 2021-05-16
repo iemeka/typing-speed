@@ -13,12 +13,16 @@ export default function Accuracy() {
         lettersPassed += 1;
       }
     });
-    return Math.round(((lettersPassed / pressedKeys.length) * 100));
-  },[pressedKeys]);
+    return Math.round((lettersPassed / pressedKeys.length) * 100);
+  }, [pressedKeys]);
 
   return (
     <div className="accuracy-wrapper">
-      <p>Accuracy: {pressedKeys.length > 0 ? calculateAccuracy() : 0}%</p>
+      <span id="number">
+        {pressedKeys.length > 0 ? calculateAccuracy() : 0}
+        <span>%</span>
+      </span>
+      <span id="text">Accuracy</span>
     </div>
   );
 }
