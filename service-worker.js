@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/typing-speed/precache-manifest.61b12734ec5e5a5f9a3111e98ff21289.js"
+  "/typing-speed/precache-manifest.cd95a9367d5a91cd2efbc31c8f9e1102.js"
 );
 
 self.addEventListener('message', (event) => {
